@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Lemonada:wght@500&family=Pacifico&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-image: url("./image/Splash.jpg"),
+    linear-gradient(
+      to right bottom,
+      rgba(35, 122, 35, 0.262),
+      rgba(58, 138, 58, 0.292),
+      rgba(143, 64, 64, 0.258)
+    );
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.navigator {
+  display: flex;
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+}
+
+.nav_list {
+  margin: 5px;
+  padding: 10px;
+  width: 5rem;
+  list-style: none;
+  background-color: rgb(116, 156, 56);
+  text-align: center;
+  border-radius: 5px;
+}
+
+.nav_list:hover {
+  background-color: rgba(128, 128, 128, 0.884);
+}
+
+.nav_list a {
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
+.nav_list:hover a {
+  color: rgb(11, 65, 11);
+  font-weight: 400;
+}
+
+.error_header {
+  color: #fff;
+  font-size: 2rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    to right,
+    rgb(170, 28, 28),
+    rgba(151, 23, 23, 0.904),
+    transparent
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header_main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: "Pacifico", cursive;
+}

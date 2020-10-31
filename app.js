@@ -33,7 +33,7 @@ app.get("/register", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.render("home");
+  res.render("index");
 });
 app.get("/index", (req, res) => {
   res.render("index", {
@@ -111,3 +111,11 @@ transporter.sendMail(mailOptions, (err, data) => {
       console.log('Email sent!!!')
   }
   });
+
+
+// const http = require('http')
+
+// http.createServer((req, res) => {
+// res.writeHead(200, {'Content-Type': 'text/plain'})
+// res.end('Hello world')
+// }).listen(8000, "127.0.0.1")

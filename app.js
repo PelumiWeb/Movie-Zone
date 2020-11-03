@@ -15,6 +15,7 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
 app.use((err, req, res, next) => {
   err.statusCode = err.statusCode || 5000;
   err.status = err.status || "error";
@@ -46,8 +47,14 @@ app.get("/login", (req, res) => {
   res.render("login");
 });
 
+const middleWare = (req, res, next) => {
+console.log(req.body.name + 'and' + req.body.email)
+
+next()
+}
+
 const bcrypt = require("bcrypt");
-app.post("/register", async (req, res) => {
+app.post("/register",  async (req, res) => {
   const maxage = 3 * 24 * 60 * 60;
   try {
     const hashPassword = await bcrypt.hash(req.body.password, 10);

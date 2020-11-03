@@ -25,10 +25,10 @@ const userSchema = new mongoose.Schema({
 const maxage = 3 * 24 * 60 * 60;
 userSchema.methods.generateToken = async function () {
   const user = this;
-  const token = jwt.sign({ _id: user._id.toString() }, "Thisisoluwapelumi", {
+  const token = jwt.sign({ _id: user._id.toString() }, process.env.TOKEN, {
     expiresIn: maxage,
   });
-
+console.log(token)
   return token;
 };
 
